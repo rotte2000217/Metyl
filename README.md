@@ -10,7 +10,7 @@ $ docker-compose up
 
 ```
 
-By default, the ecommerce site locates at port 3000. Open http://localhost:3000 to getting started!
+By default, the ecommerce site locates at port 3000. Open http://localhost:3000 to get started!
 
 ## WebBanHang
 
