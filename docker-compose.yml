@@ -1,0 +1,66 @@
+version: '3.7'
+
+services:
+  webbanhang:
+    container_name: webbanhang
+    build:
+      context: .
+      dockerfile: WebBanHang/Dockerfile
+    depends_on:
+      - db_webbanhang
+    ports:
+      - 3001:3001
+    networks:
+      - network_webbanhang
+  shop-rest-admin:
+    container_name: shop-rest-admin
+    build:
+      context: .
+      dockerfile: shop-rest-admin/Dockerfile
+    depends_on:
+      - webbanhang
+    ports:
+      - 8080:80
+    networks:
+      - network_webbanhang
+  nextjs-metyl:
+    container_name: nextjs-metyl
+    build:
+      context: .
+      dockerfile: nextjs-metyl/Dockerfile
+    depends_on:
+      - webbanhang
+    ports:
+      - 3000:3000
+    networks:
+      - network_webbanhang
+  db_webbanhang:
+    container_name: db_webbanhang
+    build:
+      context: .
+      dockerfile: src/Infrastructure/docker/Dockerfile
+    ports:
+      - 1433:1433
+    volumes:
+      - sqldata:/var/lib/sqlserver/data
+    networks:
+      - network_webbanhang
+  postgres:
+    container_name: postgres
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_USER: hieudong
+      POSTGRES_DB: nestjs_hello
+      PG_DATA: /var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - webnet
+networks:
+  network_webbanhang:
+    driver: bridge
+volumes:
+  sqldata:
