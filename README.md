@@ -14,7 +14,7 @@ By default, the ecommerce site locates at port 3000. Open http://localhost:3000 
 
 ## WebBanHang
 
-This is the backend service of the whole application, it was written with ASP.Net core 3.1, EF core
+This is the backend service of the whole application, it was written with ASP.Net core 3.1 and EF core.
 
 I'm gonna fix some issues and refactor the codebase, maybe try using DDD architecture :wink:.
 
