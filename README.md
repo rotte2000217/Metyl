@@ -2,6 +2,16 @@
 
 > :rocket: A college project written with ASP.Net core, React and Nextjs
 
+## Run
+
+```bash
+
+$ docker-compose up
+
+```
+
+By default, the ecommerce site locates at port 3000. Open http://localhost:3000 to getting started!
+
 ## WebBanHang
 
 This is the backend service of the whole application, it was written with ASP.Net core 3.1, EF core
