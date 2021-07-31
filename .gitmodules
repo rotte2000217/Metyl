@@ -1,0 +1,9 @@
+[submodule "shop-rest-admin"]
+	path = shop-rest-admin
+	url = git@github.com:baohungdev/shop-rest-admin.git
+[submodule "nextjs-metyl"]
+	path = nextjs-metyl
+	url = git@github.com:stewie1520/nextjs-metyl.git
+[submodule "WebBanHang"]
+	path = WebBanHang
+	url = git@github.com:stewie1520/WebBanHang.git
