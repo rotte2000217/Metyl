@@ -2,7 +2,7 @@
 
 > :rocket: A college project written with ASP.Net core, React and Nextjs
 
-## Run
+## Quick start
 
 ```bash
 
